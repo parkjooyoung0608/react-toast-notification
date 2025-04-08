@@ -1,0 +1,20 @@
+import Appearances from "@/StyleConfig/Appearances";
+import Placements from "@/StyleConfig/Placements";
+
+interface IToastStyleConfig {
+  appearance: keyof typeof Appearances;
+  placement: keyof typeof Placements;
+}
+
+interface IToast extends IToastStyleConfig {
+  id: string;
+  content: React.ReactNode;
+  autoDismiss?: boolean;
+  showCloseButton?: boolean;
+}
+
+interface IToastState {
+  toasts: IToast[];
+}
+
+export type { IToast, IToastState };
