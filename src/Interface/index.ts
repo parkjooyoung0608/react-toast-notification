@@ -17,4 +17,9 @@ interface IToastState {
   toasts: IToast[];
 }
 
-export type { IToast, IToastState };
+interface IToastOptions extends IToastStyleConfig {
+  autoDismiss?: boolean;
+  showCloseButton?: boolean;
+}
+
+export type { IToast, IToastState, IToastOptions };
