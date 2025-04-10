@@ -21,5 +21,9 @@ interface IToastOptions extends IToastStyleConfig {
   autoDismiss?: boolean;
   showCloseButton?: boolean;
 }
+interface IToastCountdownBar {
+  opacity: number;
+  isRunning: boolean;
+}
 
-export type { IToast, IToastState, IToastOptions };
+export type { IToast, IToastState, IToastOptions, IToastCountdownBar };
