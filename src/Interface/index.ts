@@ -42,6 +42,13 @@ interface IToastStyle extends IToastStyleConfig {
   height: number | string;
 }
 
+interface IToastController extends IToastStyleConfig {
+  children: React.ReactNode;
+  autoDismiss: boolean;
+  showCloseButton: boolean;
+  onDismiss?: () => void;
+}
+
 export type {
   IToast,
   IToastState,
@@ -49,4 +56,5 @@ export type {
   IToastCountdownBar,
   IToastComponent,
   IToastStyle,
+  IToastController,
 };
