@@ -49,6 +49,12 @@ interface IToastController extends IToastStyleConfig {
   onDismiss?: () => void;
 }
 
+interface IToastContainer {
+  children: React.ReactNode;
+  placement: keyof typeof Placements;
+  hasToasts: boolean;
+}
+
 export type {
   IToast,
   IToastState,
@@ -57,4 +63,5 @@ export type {
   IToastComponent,
   IToastStyle,
   IToastController,
+  IToastContainer,
 };
