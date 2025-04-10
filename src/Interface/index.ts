@@ -21,9 +21,32 @@ interface IToastOptions extends IToastStyleConfig {
   autoDismiss?: boolean;
   showCloseButton?: boolean;
 }
+
 interface IToastCountdownBar {
   opacity: number;
   isRunning: boolean;
 }
 
-export type { IToast, IToastState, IToastOptions, IToastCountdownBar };
+interface IToastComponent extends IToastStyleConfig {
+  children: React.ReactNode;
+  autoDismiss: boolean;
+  isRunning: boolean;
+  showCloseButton: boolean;
+  onDismiss?: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+}
+
+interface IToastStyle extends IToastStyleConfig {
+  transitionState: string;
+  height: number | string;
+}
+
+export type {
+  IToast,
+  IToastState,
+  IToastOptions,
+  IToastCountdownBar,
+  IToastComponent,
+  IToastStyle,
+};
